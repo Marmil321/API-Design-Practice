@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Task API
+  version: 0.0.1
+
+paths:
+  /tasks:
+    $ref: './paths/tasks.yml'
+
+  /tasks/{id}:
+    $ref: './paths/taskById.yml'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    ErrorResponse:
+      $ref: './schemas/ErrorResponse.yml'
+    Task:
+      $ref: './schemas/Task.yml'
+    CreateTask:
+      $ref: './schemas/CreateTask.yml'
+    UpdateTask:
+      $ref: './schemas/UpdateTask.yml'
+
+security:
+  - bearerAuth: []
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
