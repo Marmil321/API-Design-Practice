@@ -1,0 +1,42 @@
+get:
+  summary: Get all tasks
+  tags:
+    - Tasks
+  responses:
+    '200':
+      description: A list of tasks
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Task.yml'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
+post:
+  summary: Create a new task
+  tags:
+    - Tasks
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/CreateTask.yml'
+  responses:
+    '201':
+      description: Created task
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Task.yml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
