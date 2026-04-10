@@ -1,0 +1,30 @@
+type: object
+required:
+  - id
+  - title
+  - status
+  - createdAt
+properties:
+  id:
+    type: integer
+  title:
+    type: string
+  description:
+    type: string
+    nullable: true
+  status:
+    type: string
+    enum:
+      - BACKLOG
+      - READY
+      - IN_PROGRESS
+      - IN_REVIEW
+      - IN_TESTING
+      - COMPLETED
+  createdAt:
+    type: string
+    format: date-time
+  completedAt:
+    type: string
+    format: date-time
+    nullable: true
