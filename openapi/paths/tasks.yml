@@ -18,16 +18,7 @@ get:
                 items:
                   $ref: '../components/schemas/tasks/Task.yml'
               pagination:
-                type: object
-                properties:
-                  page:
-                    type: integer
-                  pageLimit:
-                    type: integer
-                  totalPages:
-                    type: integer
-                  totalItems:
-                    type: integer
+                  $ref: '../components/parameters/pagination/PaginationMeta.yml'
     '401':
       description: Unauthorized
       content:
