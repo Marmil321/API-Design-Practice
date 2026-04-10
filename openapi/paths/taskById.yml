@@ -11,7 +11,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/Task.yml'
+            $ref: '../components/schemas/tasks/Task.yml'
     '400':
       description: Bad Request
       content:
@@ -33,14 +33,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/UpdateTask.yml'
+          $ref: '../components/schemas/tasks/UpdateTask.yml'
   responses:
     '200':
       description: Updated task object
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/Task.yml'
+            $ref: '../components/schemas/tasks/Task.yml'
     '400':
       description: Bad Request
       content:

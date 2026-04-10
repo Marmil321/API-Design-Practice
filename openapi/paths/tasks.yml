@@ -10,7 +10,7 @@ get:
           schema:
             type: array
             items:
-              $ref: '../components/schemas/Task.yml'
+              $ref: '../components/schemas/tasks/Task.yml'
     '401':
       description: Unauthorized
       content:
@@ -26,14 +26,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/CreateTask.yml'
+          $ref: '../components/schemas/tasks/CreateTask.yml'
   responses:
     '201':
       description: Created task
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/Task.yml'
+            $ref: '../components/schemas/tasks/Task.yml'
     '400':
       description: Bad Request
       content:
