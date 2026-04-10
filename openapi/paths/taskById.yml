@@ -1,0 +1,68 @@
+parameters:
+  - $ref: '../components/parameters/taskId.yml'
+
+get:
+  summary: Get a task by ID
+  tags:
+    - Tasks
+  responses:
+    '200':
+      description: A task object
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Task.yml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
+    '404':
+      description: Task not found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
+put:
+  summary: Update a task by ID
+  tags:
+    - Tasks
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas/UpdateTask.yml'
+  responses:
+    '200':
+      description: Updated task object
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/Task.yml'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
+    '404':
+      description: Task not found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
+delete:
+  summary: Delete a task by ID
+  tags:
+    - Tasks
+  responses:
+    '204':
+      description: Task deleted successfully
+    '404':
+      description: Task not found
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ErrorResponse.yml'
