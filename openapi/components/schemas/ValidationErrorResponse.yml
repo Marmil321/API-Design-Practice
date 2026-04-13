@@ -1,17 +1,17 @@
 allOf:
-  - $ref: './ErrorResponse.yml'
+  - $ref: "./ErrorResponse.yml"
   - type: object
     properties:
       details:
-      type: array
-      items:
-        type: object
-        properties:
-          field:
-            type: string
-          message:
-            type: string
-          allowedValues:
-            type: array
-            items:
+        type: array
+        items:
+          type: object
+          properties:
+            field:
               type: string
+            message:
+              type: string
+            allowedValues:
+              type: array
+              items:
+                type: string

@@ -2,7 +2,7 @@ description: The request was malformed or contained invalid data
 content:
   application/json:
     schema:
-      $ref: '../schemas/ValidationErrorResponse.yml'
+      $ref: "../schemas/ValidationErrorResponse.yml"
     example:
       error: "BAD_REQUEST"
       message: "The request was malformed or contained invalid data."
@@ -11,4 +11,12 @@ content:
           message: "Title is required and must be a non-empty string."
         - field: "status"
           message: "Status must be one of the allowed values."
-          allowedValues: ["BACKLOG", "READY", "IN_PROGRESS", "IN_REVIEW", "IN_TESTING", "COMPLETED"]
+          allowedValues:
+            [
+              "BACKLOG",
+              "READY",
+              "IN_PROGRESS",
+              "IN_REVIEW",
+              "IN_TESTING",
+              "COMPLETED",
+            ]

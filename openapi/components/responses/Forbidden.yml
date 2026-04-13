@@ -2,7 +2,7 @@ description: The client does not have permission to access the requested resourc
 content:
   application/json:
     schema:
-      $ref: '../schemas/ErrorResponse.yml'
+      $ref: "../schemas/ErrorResponse.yml"
     example:
       error: "FORBIDDEN"
       message: "The client does not have permission to access the requested resource."

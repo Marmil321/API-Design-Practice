@@ -5,10 +5,10 @@ info:
 
 paths:
   /tasks:
-    $ref: './paths/tasks.yml'
+    $ref: "./paths/tasks.yml"
 
   /tasks/{id}:
-    $ref: './paths/taskById.yml'
+    $ref: "./paths/taskById.yml"
 
 components:
   securitySchemes:
@@ -18,13 +18,13 @@ components:
       bearerFormat: JWT
   schemas:
     ErrorResponse:
-      $ref: './components/schemas/ErrorResponse.yml'
+      $ref: "./components/schemas/ErrorResponse.yml"
     Task:
-      $ref: './components/schemas/tasks/Task.yml'
+      $ref: "./components/schemas/tasks/Task.yml"
     CreateTask:
-      $ref: './components/schemas/tasks/CreateTask.yml'
+      $ref: "./components/schemas/tasks/CreateTask.yml"
     UpdateTask:
-      $ref: './components/schemas/tasks/UpdateTask.yml'
+      $ref: "./components/schemas/tasks/UpdateTask.yml"
 
 security:
   - bearerAuth: []

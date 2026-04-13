@@ -2,7 +2,7 @@ description: Missing or invalid authentication credentials
 content:
   application/json:
     schema:
-      $ref: '../schemas/ErrorResponse.yml'
+      $ref: "../schemas/ErrorResponse.yml"
     example:
       error: "UNAUTHORIZED"
       message: "Authentication credentials were missing or invalid."

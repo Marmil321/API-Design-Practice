@@ -3,10 +3,10 @@ get:
   tags:
     - Tasks
   parameters:
-    - $ref: '../components/parameters/pagination/page.yml'
-    - $ref: '../components/parameters/pagination/pageLimit.yml'
+    - $ref: "../components/parameters/pagination/page.yml"
+    - $ref: "../components/parameters/pagination/pageLimit.yml"
   responses:
-    '200':
+    "200":
       description: A list of tasks
       content:
         application/json:
@@ -16,17 +16,17 @@ get:
               data:
                 type: array
                 items:
-                  $ref: '../components/schemas/tasks/Task.yml'
+                  $ref: "../components/schemas/tasks/Task.yml"
               pagination:
-                  $ref: '../components/parameters/pagination/PaginationMeta.yml'
-    '400':
-      $ref: '../components/responses/BadRequest.yml'
-    '401':
-      $ref: '../components/responses/Unauthorized.yml'
-    '403':
-      $ref: '../components/responses/Forbidden.yml'
-    '500':
-      $ref: '../components/responses/InternalServerError.yml'
+                $ref: "../components/parameters/pagination/PaginationMeta.yml"
+    "400":
+      $ref: "../components/responses/BadRequest.yml"
+    "401":
+      $ref: "../components/responses/Unauthorized.yml"
+    "403":
+      $ref: "../components/responses/Forbidden.yml"
+    "500":
+      $ref: "../components/responses/InternalServerError.yml"
 post:
   summary: Create a new task
   tags:
@@ -36,15 +36,15 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../components/schemas/tasks/CreateTask.yml'
+          $ref: "../components/schemas/tasks/CreateTask.yml"
   responses:
-    '201':
+    "201":
       description: Created task
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/tasks/Task.yml'
-    '400':
-      $ref: '../components/responses/BadRequest.yml'
-    '401':
-      $ref: '../components/responses/Unauthorized.yml'
+            $ref: "../components/schemas/tasks/Task.yml"
+    "400":
+      $ref: "../components/responses/BadRequest.yml"
+    "401":
+      $ref: "../components/responses/Unauthorized.yml"
