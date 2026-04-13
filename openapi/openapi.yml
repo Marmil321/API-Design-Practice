@@ -19,6 +19,8 @@ components:
   schemas:
     ErrorResponse:
       $ref: "./components/schemas/ErrorResponse.yml"
+    ValidationErrorResponse:
+      $ref: "./components/schemas/ValidationErrorResponse.yml"
     Task:
       $ref: "./components/schemas/tasks/Task.yml"
     CreateTask:

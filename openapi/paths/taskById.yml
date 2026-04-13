@@ -34,17 +34,9 @@ put:
           schema:
             $ref: "../components/schemas/tasks/Task.yml"
     "400":
-      description: Bad Request
-      content:
-        application/json:
-          schema:
-            $ref: "../components/schemas/ErrorResponse.yml"
+      $ref: "../components/responses/BadRequest.yml"
     "404":
-      description: Task not found
-      content:
-        application/json:
-          schema:
-            $ref: "../components/schemas/ErrorResponse.yml"
+      $ref: "../components/responses/NotFound.yml"
 delete:
   summary: Delete a task by ID
   tags:
@@ -53,8 +45,4 @@ delete:
     "204":
       description: Task deleted successfully
     "404":
-      description: Task not found
-      content:
-        application/json:
-          schema:
-            $ref: "../components/schemas/ErrorResponse.yml"
+      $ref: "../components/responses/NotFound.yml"
