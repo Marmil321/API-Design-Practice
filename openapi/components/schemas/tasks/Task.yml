@@ -3,7 +3,7 @@ required:
   - id
   - title
   - status
-  - createdAt
+  - created_at
 properties:
   id:
     type: integer
@@ -21,10 +21,11 @@ properties:
       - IN_REVIEW
       - IN_TESTING
       - COMPLETED
-  createdAt:
+  created_at:
     type: string
     format: date-time
-  completedAt:
+  completed_at:
     type: string
     format: date-time
     nullable: true
+    default: null
