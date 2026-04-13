@@ -1,0 +1,8 @@
+description: The client does not have permission to access the requested resource
+content:
+  application/json:
+    schema:
+      $ref: '../components/schemas/ErrorResponse.yml'
+    example:
+      error: "FORBIDDEN"
+      message: "The client does not have permission to access the requested resource."

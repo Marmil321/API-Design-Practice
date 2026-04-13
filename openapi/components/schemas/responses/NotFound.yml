@@ -1,0 +1,8 @@
+description: The requested resource was not found
+content:
+  application/json:
+    schema:
+      $ref: '../components/schemas/ErrorResponse.yml'
+    example:
+      error: "NOT_FOUND"
+      message: "The requested resource was not found."

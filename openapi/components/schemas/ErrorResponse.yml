@@ -7,15 +7,4 @@ properties:
     type: string
   message:
     type: string
-  details:
-      type: array
-      items:
-        type: object
-        properties:
-          field:
-            type: string
-          allowedValues:
-            type: array
-            items:
-              type: string
   
