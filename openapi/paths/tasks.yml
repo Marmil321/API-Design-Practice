@@ -20,29 +20,13 @@ get:
               pagination:
                   $ref: '../components/parameters/pagination/PaginationMeta.yml'
     '400':
-      description: Bad Request
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/BadRequest.yml'
     '401':
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/Unauthorized.yml'
     '403':
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/Forbidden.yml'
     '500':
-      description: Internal Server Error
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/InternalServerError.yml'
 post:
   summary: Create a new task
   tags:
@@ -61,14 +45,6 @@ post:
           schema:
             $ref: '../components/schemas/tasks/Task.yml'
     '400':
-      description: Bad Request
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/BadRequest.yml'
     '401':
-      description: Unauthorized
-      content:
-        application/json:
-          schema:
-            $ref: '../components/schemas/ErrorResponse.yml'
+      $ref: '../components/responses/Unauthorized.yml'
