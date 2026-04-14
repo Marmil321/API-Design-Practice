@@ -16,6 +16,8 @@ get:
       $ref: "../components/responses/BadRequest.yml"
     "404":
       $ref: "../components/responses/NotFound.yml"
+    "500":
+      $ref: "../components/responses/InternalServerError.yml"
 put:
   summary: Update a task by ID
   tags:
@@ -37,6 +39,8 @@ put:
       $ref: "../components/responses/BadRequest.yml"
     "404":
       $ref: "../components/responses/NotFound.yml"
+    "500":
+      $ref: "../components/responses/InternalServerError.yml"
 delete:
   summary: Delete a task by ID
   tags:
@@ -46,3 +50,5 @@ delete:
       description: Task deleted successfully
     "404":
       $ref: "../components/responses/NotFound.yml"
+    "500":
+      $ref: "../components/responses/InternalServerError.yml"
