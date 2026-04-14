@@ -37,6 +37,8 @@ put:
             $ref: "../components/schemas/tasks/Task.yml"
     "400":
       $ref: "../components/responses/BadRequest.yml"
+    "401":
+      $ref: "../components/responses/Unauthorized.yml"
     "404":
       $ref: "../components/responses/NotFound.yml"
     "500":
